@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Interactive Resume Builder</h1>
+    <div class="container">
+        <form id="resumeForm">
+            <h2>Enter Your Details</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" oninput="updatePreview()">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" oninput="updatePreview()">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" oninput="updatePreview()">
+            
+            <label for="summary">Profile Summary:</label>
+            <textarea id="summary" placeholder="Brief about yourself" oninput="updatePreview()"></textarea>
+            
+            <label>Education:</label>
+            <div id="education-section"></div>
+            <button type="button" onclick="addEducation()">Add Education</button>
+            
+            <label>Skills:</label>
+            <div id="skills-section">
+                <input type="checkbox" id="html" value="HTML" onchange="updatePreview()"> HTML
+                <input type="checkbox" id="css" value="CSS" onchange="updatePreview()"> CSS
+                <input type="checkbox" id="js" value="JavaScript" onchange="updatePreview()"> JavaScript
+            </div>
+            
+            <label>Experience:</label>
+            <div id="experience-section"></div>
+            <button type="button" onclick="addExperience()">Add Experience</button>
+            
+            <button type="reset" onclick="resetForm()">Clear Form</button>
+        </form>
+
+        <div class="preview" id="resumePreview">
+            <h2>Resume Preview</h2>
+            <p><strong>Name:</strong> <span id="previewName"></span></p>
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+            <p><strong>Profile Summary:</strong> <span id="previewSummary"></span></p>
+            <h3>Education</h3>
+            <ul id="previewEducation"></ul>
+            <h3>Skills</h3>
+            <ul id="previewSkills"></ul>
+            <h3>Experience</h3>
+            <ul id="previewExperience"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

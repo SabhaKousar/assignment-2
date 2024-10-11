@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+form {
+    width: 45%;
+}
+
+.preview {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+button {
+    margin-top: 10px;
+}
+
+h2 {
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    form, .preview {
+        width: 100%;
+    }
+}
